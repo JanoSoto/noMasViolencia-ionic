@@ -1,0 +1,45 @@
+<ion-view view-title="No Más Violencia">
+  <ion-content>
+  	<div class="row">
+	    <div class="col s12 m6">
+	        <div class="row valign-wrapper">
+	            <!--div class="col hide-on-small-only m6">
+	                <a href="http://www.usach.cl/" target="_blank" rel="noopener noreferrer">
+	                    <img class="responsive-img" src="images/logo-usach-naranjo.png"></img>
+	                </a>
+	            </div-->
+	            <div class="col s12">                
+	                <div class="context">
+	                    <div class="row hide-on-med-and-up">
+	                        <!--div class="col s3">
+	                            <a href="http://www.usach.cl/" target="_blank" rel="noopener noreferrer">
+	                                <img class="responsive-img" src="images/logo-usach-naranjo.png"></img>
+	                            </a>
+	                        </div-->
+	                        <div class="col s12">
+	                            <h4>Definiciones</h4>
+	                        </div>
+	                    </div>
+	                    <h4 class="hide-on-small-only">Definiciones</h4>
+	                    <p>En esta sección encontrará definiciones y conceptos en base a Convenios internacionales y la teoría de género, con el fin de facilitar la identificación de situaciones en que se sospecha existe algún tipo de violencia de género.</p>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+    </div>
+    <div class="row">
+		<ion-list id="def-list">
+			<div ng-repeat="definicion in definiciones">
+				<ion-item class="definicion panel-color waves-effect waves-light" ng-click="toggleGroup(definicion, definiciones)">
+						{{definicion.concepto}}
+				</ion-item>
+				<div class="card item-accordion" ng-show="isGroupShown(definicion)">
+				  <div class="item item-text-wrap">
+				    {{definicion.def}}
+				  </div>
+				</div>
+			</div>
+		</ion-list>                
+	</div>
+  </ion-content>
+</ion-view>
